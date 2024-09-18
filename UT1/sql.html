@@ -1,0 +1,1430 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../index.html">
+      
+      
+      
+      <link rel="icon" href="../images/favicon.jpeg">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.35">
+    
+    
+      
+        <title>UT1. Instal·lació de sistemes gestors de base de dades. - Administració de Sistemes Gestors de Base de Dades</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#consultes-sql-select" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../index.html" title="Administració de Sistemes Gestors de Base de Dades" class="md-header__button md-logo" aria-label="Administració de Sistemes Gestors de Base de Dades" data-md-component="logo">
+      
+  <img src="../images/favicon.jpeg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Administració de Sistemes Gestors de Base de Dades
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UT1. Instal·lació de sistemes gestors de base de dades.
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Administració de Sistemes Gestors de Base de Dades" class="md-nav__button md-logo" aria-label="Administració de Sistemes Gestors de Base de Dades" data-md-component="logo">
+      
+  <img src="../images/favicon.jpeg" alt="logo">
+
+    </a>
+    Administració de Sistemes Gestors de Base de Dades
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    UT1. Instal·lació de sistemes gestors de base de dades.
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="sql.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    UT1. Instal·lació de sistemes gestors de base de dades.
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#consultes-senzilles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultes senzilles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consultes senzilles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retornar-tots-els-camps-duna-taula-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retornar tots els camps d'una taula (SELECT *)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retornar-un-subconjunt-dels-camps-duna-taula-select-distinct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retornar un subconjunt dels camps d'una taula (SELECT DISTINCT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retornar-un-subconjunt-dels-registres-duna-taula-where" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retornar un subconjunt dels registres d'una taula (WHERE)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Retornar un subconjunt dels registres d'una taula (WHERE)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operadors-relacionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadors relacionals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadors-logics-and-or-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadors lògics (AND, OR, NOT)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordenacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordenació
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ordenació">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordenar-segons-criteris-order-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordenar segons criteris (ORDER BY)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devolucio-dexpressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Devolució d'expressions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Devolució d'expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assignacio-dun-alies-a-una-dada-tornada-as" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assignació d'un àlies a una dada tornada (AS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-dexpressions-emprant-operadors-io-funcions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ús d'expressions emprant operadors i/o funcions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultes-agrupades-group-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultes agrupades (GROUP BY)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devolucio-de-files-nullesno-nulles-is-null-is-not-null" class="md-nav__link">
+    <span class="md-ellipsis">
+      Devolució de files nul·les/no nul·les (IS NULL / IS NOT NULL)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultes-per-interseccions-entre-taules-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultes per interseccions entre taules (JOIN)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consultes per interseccions entre taules (JOIN)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inner-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      INNER JOIN
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="INNER JOIN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inner-join-implicit" class="md-nav__link">
+    <span class="md-ellipsis">
+      INNER JOIN implícit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inner-join-natural-natural-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      INNER JOIN natural (NATURAL JOIN)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inner-join-explicit" class="md-nav__link">
+    <span class="md-ellipsis">
+      INNER JOIN explícit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      LEFT JOIN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      RIGHT JOIN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-outer-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      FULL OUTER JOIN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultes-anidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultes anidades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consultes anidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#emprant-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emprant IN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emprant-operadors-relacionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emprant operadors relacionals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emprant-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emprant ALL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emprant-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emprant ANY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emprant-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emprant EXISTS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#consultes-senzilles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultes senzilles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consultes senzilles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retornar-tots-els-camps-duna-taula-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retornar tots els camps d'una taula (SELECT *)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retornar-un-subconjunt-dels-camps-duna-taula-select-distinct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retornar un subconjunt dels camps d'una taula (SELECT DISTINCT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retornar-un-subconjunt-dels-registres-duna-taula-where" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retornar un subconjunt dels registres d'una taula (WHERE)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Retornar un subconjunt dels registres d'una taula (WHERE)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operadors-relacionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadors relacionals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadors-logics-and-or-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadors lògics (AND, OR, NOT)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordenacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordenació
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ordenació">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordenar-segons-criteris-order-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordenar segons criteris (ORDER BY)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devolucio-dexpressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Devolució d'expressions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Devolució d'expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assignacio-dun-alies-a-una-dada-tornada-as" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assignació d'un àlies a una dada tornada (AS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-dexpressions-emprant-operadors-io-funcions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ús d'expressions emprant operadors i/o funcions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultes-agrupades-group-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultes agrupades (GROUP BY)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devolucio-de-files-nullesno-nulles-is-null-is-not-null" class="md-nav__link">
+    <span class="md-ellipsis">
+      Devolució de files nul·les/no nul·les (IS NULL / IS NOT NULL)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultes-per-interseccions-entre-taules-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultes per interseccions entre taules (JOIN)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consultes per interseccions entre taules (JOIN)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inner-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      INNER JOIN
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="INNER JOIN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inner-join-implicit" class="md-nav__link">
+    <span class="md-ellipsis">
+      INNER JOIN implícit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inner-join-natural-natural-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      INNER JOIN natural (NATURAL JOIN)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inner-join-explicit" class="md-nav__link">
+    <span class="md-ellipsis">
+      INNER JOIN explícit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      LEFT JOIN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      RIGHT JOIN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-outer-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      FULL OUTER JOIN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultes-anidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consultes anidades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Consultes anidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#emprant-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emprant IN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emprant-operadors-relacionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emprant operadors relacionals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emprant-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emprant ALL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emprant-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emprant ANY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emprant-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emprant EXISTS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="consultes-sql-select">Consultes SQL (<a href="http://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all">SELECT</a>)</h1>
+<h2 id="consultes-senzilles">Consultes senzilles</h2>
+<h3 id="retornar-tots-els-camps-duna-taula-select">Retornar tots els camps d'una taula (SELECT *)</h3>
+<pre><code>SELECT * 
+FROM Client
+</code></pre>
+<p>Amb l'asterisc indiquem que volem retornar <a href="http://www.w3schools.com/sql/sql_select.asp">tots el camps</a>. Si <em>Clients</em> disposa dels camps <em>idClient</em>, <em>nom</em> i <em>descripcio</em>, l'anterior seria equivalent a:</p>
+<pre><code>SELECT idClient, nom, descripcio
+FROM Client
+</code></pre>
+<p>Obviament, al voler totes els camps, açò és innecessari i per tant més convenient emprar l'asterisc (*). També seria equivalent emprar la notació completa:</p>
+<pre><code>SELECT Client.idClient, Client.nom, Client.descripcio
+FROM Client
+</code></pre>
+<p>Al tindre únicament una taula involucrada, podem referir-nos als camps sense qualificar, donat que no hi hac dubte de a quina taula es refereix. Quan vegem consultes sobre diverses taules comprendrem la necessitat d'incloure aquesta notació qualificada (Taula.camp).</p>
+<h3 id="retornar-un-subconjunt-dels-camps-duna-taula-select-distinct">Retornar un subconjunt dels camps d'una taula (SELECT DISTINCT)</h3>
+<pre><code>SELECT cp, ciutat
+FROM Direccio
+</code></pre>
+<p>Aquesta consulta retornarà únicament els camps <em>cp</em> (codi postal) i <em>ciutat</em> de la taula <em>Direccio</em>. Al tindre un subconjunt dels camps, aquestos no tenen per què incloure a la clau de la taula, de manera que no han de ser únics. Així, si tenim molts registres referits a distints carrers i números d'aquests mateix codi postal i ciutat, ens trobarem molts registres repetits. Açò pot evitar-se fent:</p>
+<pre><code>SELECT DISTINCT cp, ciutat
+FROM Client
+</code></pre>
+<p>Així s'eliminen els registres repetits, tornant únicament una vegada cada parell <em>cp</em>, <em>ciutat</em>. Aquesta selecció d'un subconjunt de les dades de la taula i excloent-ne repetides s'anomena en àlgebra relacional <em>projecció</em>.</p>
+<h3 id="retornar-un-subconjunt-dels-registres-duna-taula-where">Retornar un subconjunt dels registres d'una taula (WHERE)</h3>
+<pre><code>SELECT numero, carrer
+FROM Direccio
+WHERE ciutat = 'Sevilla'
+</code></pre>
+<p>Aquesta consulta tornaria el número i l'adreça de totes les adreces pertanyents a la ciutat de Sevilla. Com veiem, amb WHERE indiquem la condició que han de complir els
+registres de la taula per ser tornats a la consulta. En aquest cas tenim una condició
+simple donada per la comparació d'igualtat (=) entre el camp (ciutat) i un literal de tipus cadena, entre cometes simples ('Sevilla').</p>
+<pre><code>SELECT carrer, ciutat
+FROM Direccio
+WHERE numero = 12
+</code></pre>
+<p>Aquesta altra consulta tornaria el carrer i ciutat de tots els registres de la taula amb el número 12, en aquest cas un literal numèric. Les condicions emprades poden ser molt més complexes incloent un altre tipus d'operadors i combinacions dels mateixos.</p>
+<h4 id="operadors-relacionals">Operadors relacionals</h4>
+<p>Al marge del signe d'igualtat emprat anteriorment, es poden fer servir n les condicions simples de les consultes els operadors relacionals habituals, tornant sempre un valor booleà (lògic):</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Significat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;</td>
+<td>Menor que</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>Major que</td>
+</tr>
+<tr>
+<td>&lt;&gt;</td>
+<td>Distint de</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Menor o igual que</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>Major o igual que</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Igual que</td>
+</tr>
+</tbody>
+</table>
+<pre><code>SELECT nom
+FROM Client
+WHERE edat &lt;= 32
+</code></pre>
+<p>Addicionalment, disposem d'operadors de comparació addicionals, també tornant
+valors booleans (lògics) True o False segons si es compleixen o no les condicions:</p>
+<p><strong><a href="http://www.w3schools.com/sql/sql_between.asp">BETWEEN</a></strong>: per indicar un interval de valors.</p>
+<pre><code>SELECT nom
+FROM Client
+WHERE edat BETWEEN 20 AND 35
+</code></pre>
+<p><strong><a href="http://www.techonthenet.com/sql/like.php">LIKE</a></strong>: emprat per comparar <a href="http://www.w3schools.com/sql/sql_wildcards.asp">patrons de text</a> podent incloure comodins com els següents:</p>
+<table>
+<thead>
+<tr>
+<th>Comodí</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%</td>
+<td>Substitut per zero o més caràcters</td>
+</tr>
+<tr>
+<td>_</td>
+<td>Substitut per exàctament un caràcter</td>
+</tr>
+<tr>
+<td>[llista_caràcters]</td>
+<td>Qualsevol caràcter de la llista</td>
+</tr>
+<tr>
+<td>[^llista_caràcters]</td>
+<td>Qualsevol caràcter que no estiga a la llista</td>
+</tr>
+<tr>
+<td>[!llista_caràcters]</td>
+<td>Qualsevol caràcter que no estiga a la llista</td>
+</tr>
+</tbody>
+</table>
+<pre><code>SELECT numero, carrer, cp
+FROM Direccio
+WHERE ciutat LIKE 'Val%'
+</code></pre>
+<p>Aquesta consulta tornaria les dades de les adreces de tota ciutat que comenci per <em>Val</em> i seguiu per qualsevol nombre de caràcters, incloent zero caràcters. Per exemple, <em>Valladolid</em> o <em>València</em>. A l'enllaç anterior sobre patrons de text podem practicar directament des de la web.</p>
+<p><strong><a href="http://www.w3schools.com/sql/sql_in.asp">IN</a></strong>: emprat per comparar amb una llista de valors fixat de manera que retorne True si el camp indicat pertany a la llista.</p>
+<pre><code>SELECT numero, carrer, ciutat
+FROM Direccio
+WHERE ciutat IN ('Sevilla', 'Córdoba', 'Huelva', 'Cádiz')
+</code></pre>
+<h4 id="operadors-logics-and-or-not">Operadors lògics (AND, OR, NOT)</h4>
+<p>Els <a href="http://www.w3schools.com/sql/sql_and_or.asp">operadors lògics</a> ens serveixen per compondre expressions de filtratge a partir de les anteriors:
+| Operador | Significat |
+| -------- | ---------- |
+| AND | I lògic |
+| OR | O lògic |
+| NOT | Negació lògica |</p>
+<p>La precedència i l'associativitat és l'habitual definida a la Lògica. En qualsevol cas, quan incloga expressions que empren diversos d'aquests operadors és recomanable fer servir parèntesis per evitar errors. Per exemple:</p>
+<pre><code>SELECT *
+FROM Direccio
+WHERE ciutat = 'Sevilla' AND cp = 41009 OR ciutat = 'Córdoba' AND NOT cp = 14010
+</code></pre>
+<p>Retorna els registres pertanyents a adreces que tinguin el codi postal 41009 de Sevilla o bé que no tinguen el 14010 de Córdoba. La precedència més gran l'adopta l'operador <em>NOT</em> sobre la condició <em>cp = 14010</em>; a continuació els <em>AND</em> s'apliquen sobre <em>ciutat = Sevilla AND cp = 41009</em> i <em>ciutat = Córdoba AND NOT cp = 14010</em>; finalment s'aplica l'<em>OR</em> sobre la fórmula completa. La mateixa consulta es pot expressar de manera més clara amb parèntesis:</p>
+<pre><code>SELECT *
+FROM Direccio
+WHERE (ciutat = 'Sevilla' AND cp = 41009) OR (ciutat = ‘Córdoba’ AND (NOT cp = 14010))
+</code></pre>
+<p>O bé si el <em>NOT</em> ens sembla més evident, podem excloure el parèntesi interior, sempre conservant el significat que volíem donar a l'operació.</p>
+<h2 id="ordenacio">Ordenació</h2>
+<h3 id="ordenar-segons-criteris-order-by">Ordenar segons criteris (ORDER BY)</h3>
+<p>Podem ordenar els registres tornats per una consulta pel camp o camps que considerem oportuns:</p>
+<pre><code>SELECT *
+FROM Ciutat
+ORDER BY provincia ASC, numhabitants DESC
+</code></pre>
+<p>Aquesta consulta tornaria totes les ciutats ordenades per província en ordre ascendent, i dins dels de la mateixa província ordenaria les ciutats per ordre descendent del número
+d'habitants. Si no indiquem ASC ni DESC, el comportament per defecte serà l'ordre ascendent (ASC).</p>
+<h2 id="devolucio-dexpressions">Devolució d'expressions</h2>
+<h3 id="assignacio-dun-alies-a-una-dada-tornada-as">Assignació d'un àlies a una dada tornada (AS)</h3>
+<pre><code>SELECT idClient AS id, nom AS client, descripcio AS desc
+FROM Client
+</code></pre>
+<h3 id="us-dexpressions-emprant-operadors-io-funcions">Ús d'expressions emprant operadors i/o funcions</h3>
+<p>Podem practicar a <a href="http://sqlzoo.net/wiki/SELECT">SQLzoo</a> a utilitzar expressions amb <a href="https://dev.mysql.com/doc/refman/8.4/en/functions.html">operadors i funcions</a>. Per exemple:</p>
+<pre><code>SELECT MOD(DAY(NOW()),7) AS numSetmana, POW(2,3) AS potencia8
+</code></pre>
+<p>Retorna el número de setmana en què ens trobem dins del mes, ja que NOW() ens torna la data/hora actual, de la qual extraiem el dia amb DAY, i posteriorment calculem el mòdul 7 del dit dia (de manera que per a un dia 26 tornaria un 5, per exemple). La dada amb àlies potencia8 retornaria 8 (2 elevada a 3, POW és power, potència). </p>
+<p>Es pot combinar naturalment la potència d'aquest llenguatge d'expressions usant operadors i funcions sobre les dades dels registres d'una taula:</p>
+<pre><code>SELECT DAY(dataLinia) AS dia, FLOOR(preuLinia * 0.85) AS preuDtoArrodonit
+FROM LiniaComanda
+</code></pre>
+<h2 id="consultes-agrupades-group-by">Consultes agrupades (GROUP BY)</h2>
+<p>Les consultes anteriors recuperaven, treballaven amb, i mostraven informació a nivell de cada registre individual de la base de dades. Així, si tenim un producte amb un determinat
+preu, podem tornar el preu mitjançant <em>SELECT preuLinia</em> o bé operar-hi com a <em>SELECT preuLinia * 0.85</em>.</p>
+<p>Ara bé, podem voler obtenir informació que no prové d'un registre individual sinó de l'agrupació d'informació, com és el cas de comptar el nombre de línies de comanda, sumar el preu de totes les línies per cada comanda, etc. Per això, hem d'emprar funcions agregades i, en la majoria dels casos, agrupar per algun camp.</p>
+<p>Així, per veure el nombre total de registres podem fer:</p>
+<pre><code>SELECT COUNT(*)
+FROM LiniaComanda
+</code></pre>
+<p>Si per contra desitgem obtenir el total de línies per comanda, cal indicar que agrupeu per idComanda, el que comptarà tots els registres amb el mateix idComanda i calcularà el seu
+recompte:</p>
+<pre><code>SELECT idComanda, COUNT(*)
+FROM LiniaComanda
+GROUP BY idComanda
+</code></pre>
+<p>El mateix es pot aplicar a altres funcions com la suma, indicant en aquest cas a part de la agrupació el camp que volem sumar:</p>
+<pre><code>SELECT idComanda, SUM(preuLinia)
+FROM LiniaComanda
+GROUP BY idComanda
+</code></pre>
+<p>I si volem trobar la mitjana dels preus per cada comanda? En aquest cas necessitem de nou agrupar (GROUP BY) per comanda.</p>
+<pre><code>SELECT idComanda, AVG(preuLinea)
+FROM LiniaComanda
+GROUP BY idComanda
+</code></pre>
+<p>Igualment, podríem aplicar un arrodoniment (ROUND) sobre la mitjana, per deixar 4 decimals, i aplicar un àlies (AS) per al nom de la dada de sortida.</p>
+<pre><code>SELECT idComanda, ROUND(AVG(preuLinia),4) AS mitjana
+FROM LiniaComanda
+GROUP BY idComanda
+</code></pre>
+<p>O podríem establir una condició sobre la dada agrupada (HAVING), de manera que només es mostrin les mitges menors o iguals que 10. Hi ha una gran quantitat de
+funcions d'agregació definides a SQL, però cal tenir precaució perquè poden diferir d'un SGBD a un altre.</p>
+<pre><code>SELECT idComanda, ROUND(AVG(preuLinea),4)
+FROM LiniaComanda
+GROUP BY idComanda
+HAVING AVG(preuLinea) &lt; 10
+</code></pre>
+<p>Per practicar amb les més comunes és molt recomanable aquest <a href="https://sqlzoo.net/wiki/SUM_and_COUNT">tutorial interactiu</a>. La següent taula mostra algunes funcions d'agregació estàndard:</p>
+<table>
+<thead>
+<tr>
+<th>Funció</th>
+<th>Ús</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AVG(expressió)</td>
+<td>Calcula el valor mithà de la columna donada per l'expressió</td>
+</tr>
+<tr>
+<td>CORR(dependent, independent)</td>
+<td>Calcula el coeficient de correlació</td>
+</tr>
+<tr>
+<td>COUNT(expressió)</td>
+<td>Calcula les files definides per l'expressió</td>
+</tr>
+<tr>
+<td>COUNT(*)</td>
+<td>Calcula totes les files en la taula o vista especificada</td>
+</tr>
+<tr>
+<td>COVAR_POP (dependent, independent)</td>
+<td>Calcula la covariància poblacional</td>
+</tr>
+<tr>
+<td>COVAR_SAMP (dependent, independent)</td>
+<td>Calcula la covariància mostral</td>
+</tr>
+<tr>
+<td>CUME_DIST(llista_valors) WITHIN GROUP (ORDER BY llista_ordenacio)</td>
+<td>Calcula el rang relatiu d'una hipotètica fila dins d'un grup de files, on és el rang igual al nombre de files menor o igual a la fila hipotètica dividida pel nombre de files del grup</td>
+</tr>
+<tr>
+<td>DENSE_RANK(llista_valors) WITHIN GROUP (ORDER BY llista_ordenacio)</td>
+<td>Genera un rang dens (no es salten cap rang) per a una fila hipotètica (llista_valors) en un grup de</td>
+</tr>
+<tr>
+<td>files generades per GROUP BY</td>
+<td></td>
+</tr>
+<tr>
+<td>MIN(expressió)</td>
+<td>Troba el valor mínim en la columna donada per l'expressió</td>
+</tr>
+<tr>
+<td>MAX(expressió)</td>
+<td>Troba el valor màxim en la columna donada per l'expressió</td>
+</tr>
+<tr>
+<td>PERCENT_RANK(llista_valors) WITHIN GROUP (ORDER BY llista_ordenacio)</td>
+<td>Genera un rang relatiu per a una fila hipotètica dividint el rang d'aquesta fila menys 1 pel nombre</td>
+</tr>
+<tr>
+<td>de files del grup</td>
+<td></td>
+</tr>
+<tr>
+<td>PERCENTILE_CONT (percentil) WITHIN GROUP (ORDER BY llista_ordenacio)</td>
+<td>Genera un valor interpolat que, si s'afegeix al grup, correspondria al percentil donat</td>
+</tr>
+<tr>
+<td>PERCENTILE_DISC (percentil) WITHIN GROUP (ORDER BY llista_ordenacio)</td>
+<td>Retorna el valor amb el valor de distribució acumulat més petit superior o igual al percentil</td>
+</tr>
+<tr>
+<td>RANK(llista_valors) WITHIN GROUP (ORDER BY llista_ordenacio)</td>
+<td>Genera un rang per a una fila hipotètica (llista_valors) en un grup de files generat per GROUP BY</td>
+</tr>
+<tr>
+<td>REGR_AVGX(dependent, independent)</td>
+<td>Calcula la mitjana de la variable independent</td>
+</tr>
+<tr>
+<td>REGR_AVGY(dependent, independent)</td>
+<td>Calcula la mitjana de la variable dependent</td>
+</tr>
+<tr>
+<td>REGR_COUNT(dependent, independent)</td>
+<td>Compta el nombre de parells que queden al grup després que s'ha eliminat qualsevol parell amb un o més valors NULL</td>
+</tr>
+<tr>
+<td>REGR_INTERCEPT(dependent,independent)</td>
+<td>Calcula la intercepció-y de l'equació lineal d'ajust de mínims quadrats</td>
+</tr>
+<tr>
+<td>REGR_R2(dependent, independent)</td>
+<td>Eleva al quadrat el coeficient de correlació</td>
+</tr>
+<tr>
+<td>REGR_SLOPE(dependent, independent)</td>
+<td>Determina el pendent de l'equació lineal d'ajust de mínims quadrats</td>
+</tr>
+<tr>
+<td>REGR_SXX(dependent, independent)</td>
+<td>Suma els quadrats de les variables independents</td>
+</tr>
+<tr>
+<td>REGR_SXY(dependent, independent)</td>
+<td>Suma els productes de cada parell de variables</td>
+</tr>
+<tr>
+<td>REGR_SYY(dependent, independent)</td>
+<td>Suma els quadrats de les variables dependents</td>
+</tr>
+<tr>
+<td>STDDEV_POP(expressió)</td>
+<td>Calcula la desviació estàndard de la població de tots els valors d'expressió d'un grup</td>
+</tr>
+<tr>
+<td>STDDEV_SAMP(expressió)</td>
+<td>Calcula la desviació estàndard de la mostra de tots els valors d'expressió d'un grup</td>
+</tr>
+<tr>
+<td>SUM(expressió)</td>
+<td>Calcula la suma dels valors de la columna donada per l'expressió</td>
+</tr>
+<tr>
+<td>VAR_POP(expressió)</td>
+<td>Calcula la variància poblacional de tots els valors de l'expressió a un grup</td>
+</tr>
+<tr>
+<td>VAR_SAMP(expressió)</td>
+<td>Calcula la covariància mostralde tots els valors de l'expressió a un grup</td>
+</tr>
+</tbody>
+</table>
+<h2 id="devolucio-de-files-nullesno-nulles-is-null-is-not-null">Devolució de files nul·les/no nul·les (IS NULL / IS NOT NULL)</h2>
+<pre><code>SELECT idComanda
+FROM Comanda
+WHERE direccioEnviament IS NULL
+</code></pre>
+<p>Tornaria les comandes que no tenen adreça d'enviament associada.</p>
+<h2 id="consultes-per-interseccions-entre-taules-join">Consultes per interseccions entre taules (JOIN)</h2>
+<p>Podem generar una consulta que obtinga <a href="http://www.w3schools.com/sql/sql_join.asp">dades de diverses taules</a>, podent establir alhora criteris sobre altres. Vegem-ne els tipus fonamentals (una bona explicació es pot trobar a aquest enllaç). </p>
+<figure style="align: center;">
+    <img src="./images/taules-sql.png">
+    <figcaption>Taules exemple</figcaption>
+</figure>
+
+<p>Per exemple, donats els clients del nostre concessionari i les nostres vendes de cotxes a clients als diversos concessionaris, podem obtenir una consulta que obtinga dades del client i de la venda. Per exemple, nom, cognoms, codCotxe i color, mitjançant una consulta del tipus:</p>
+<pre><code>SELECT nom, cognoms, codCotxe, color
+FROM Client, Venda
+WHERE Client.cifcl = Venda.cifcl
+</code></pre>
+<h3 id="inner-join">INNER JOIN</h3>
+<h4 id="inner-join-implicit">INNER JOIN implícit</h4>
+<p>Per exemple, per obtenir les dades del client i la comanda a la mateixa consulta:</p>
+<pre><code>SELECT nom, cifc, dataVenda
+FROM Client, Venda
+WHERE Client.cifcl = Venda.cifcl
+</code></pre>
+<p>Com veiem, podem començar escrivint tal qual les dades que ens demanen (SELECT), d'on podem obtenir-les (FROM) i amb quin criteri (WHERE). Aquesta és la versió més antiga de SQL, encara que se segueix emprant, coneixent-se com a JOIN implícit ja que no s'usa enlloc la paraula <a href="http://sqlzoo.net/wiki/JOIN">JOIN</a>, però s'està fent la intersecció per la foreign key, en aquest cas la columna <em>cifcl</em>.</p>
+<p>Si ometem en el cas anterior el WHERE:</p>
+<pre><code>SELECT nom, cifc, dataVenda
+FROM Client, Venda
+</code></pre>
+<p>Obtindrem les dades sol·licitades per a tots els parells de registres de Client i Venda, el producte cartesià, de manera que si hi ha 3 registres a Client i 4 a Venda retornarem 12 registres. Podeu provar aquests comportaments en aquest <a href="http://www.w3schools.com/sql/trysql.asp?filename=trysql_select_join_inner">enllaç</a>. Aquest tipus de join es coneix com a <strong>CROSS JOIN</strong>, i en aquest cas s'ha fet de manera implícita.</p>
+<h4 id="inner-join-natural-natural-join">INNER JOIN natural (NATURAL JOIN)</h4>
+<pre><code>SELECT nom, cifc, dataVenda
+FROM Client NATURAL JOIN Venda
+</code></pre>
+<p>Aquesta consulta obté el mateix que el join implícit inicial, de manera que NATURAL JOIN estableix la condició d'igualtat entre els camps amb el mateix nom.</p>
+<h4 id="inner-join-explicit">INNER JOIN explícit</h4>
+<p>La forma més habitual d'INNER JOIN és la que intersecta les taules indicades a INNER JOIN pel camp indicat per ON.</p>
+<pre><code>SELECT nom, cifc, dataVenda
+FROM Client INNER JOIN Venda
+ON Client.cifcl = Venda.cifcl
+</code></pre>
+<p>Aquest comportament s'explica i es pot provar <a href="http://www.w3schools.com/sql/sql_join_inner.asp">ací</a>, en aquest altre <a href="http://sqlzoo.net/wiki/Music_Tutorial">enllaç</a> o finalment <a href="http://sqlzoo.net/wiki/More_JOIN_operations">ací</a>.
+Com veiem, és equivalent a l'INNER JOIN implícit, però en lloc d'establir una condició sobre els camps de les relacions al WHERE, estableix la condició associada a la relació entre les dues taules a través de la FOREIGN KEY, en aquest cas des de l'atribut (camp) cifcl a la relació (taula) Venda, FOREIGN KEY que fa referència a l'atribut cifcl de la relació Client.</p>
+<p>Amb la notació explícita també podem expressar un CROSS JOIN com es va indicar en el cas explícit:</p>
+<pre><code>SELECT nom, cifc, dataVenda
+FROM Client CROSS JOIN Venda
+</code></pre>
+<p><strong>Nota</strong>: encara que el més freqüent és que la condició del JOIN sigui en termes d'igualtat entre les claus, també es podrien establir condicions emprant altres operadors relacionals (operadors per comparar dos valors, tornant un resultat booleà, és a dir, cert o fals):</p>
+<pre><code>SELECT nom, cifc, dataVenda
+FROM Client INNER JOIN Venda
+ON Client.cifcl &lt; Venda.cifcl
+</code></pre>
+<h3 id="left-join">LEFT JOIN</h3>
+<p>El resultat d'aquesta operació sempre conté tots els registres de la relació esquerra (primera taula que indiquem), i aquells de la taula dreta que compleixen la condició establerta. Per a la resta apareixerà als camps corresponents a aquesta taula un NULL.</p>
+<pre><code>SELECT nom, cifc, dataVenda
+FROM Client LEFT JOIN Venda
+ON Client.cifcl = Venda.cifcl
+</code></pre>
+<p>Aquesta consulta tornarà tots els clients amb les comandes, i un registre per cada client que no tingui comandes.</p>
+<h3 id="right-join">RIGHT JOIN</h3>
+<p>El RIGHT JOIN és anàleg al LEFT JOIN, però tornant tots els registres de la relació dreta (segona taula que apareix), i únicament aquells de la taula esquerra que compleixen la condició del JOIN. El resultat d'aquesta operació sempre conté tots els registres de la relació dreta (segona taula que indiquem), de manera que en aquells sense equivalent a la part esquerra tindran als camps corresponents a aquesta taula un NULL.</p>
+<pre><code>SELECT nom, cifc, dataVenda
+FROM Client RIGHT JOIN Venda
+ON Client.cifcl = Venda.cifcl
+</code></pre>
+<p>Assumint que poguéssim tenir a la base de dades comandes sense client associat, aquesta consulta tornarà totes les comandes amb els seus clients, i en cas que el client no aparegui el nom Client seria NULL.</p>
+<h3 id="full-outer-join">FULL OUTER JOIN</h3>
+<pre><code>SELECT Empleat.nom, Empleat.cognoms, Empresa.nom
+FROM Empleat FULL OUTER JOIN Empresa
+ON Empleat.empresa = Empresa.cif
+</code></pre>
+<p>Aquesta consulta tornaria tant les dades de les empreses sense empleats com les dels empleats sense empresa, apareixent emplenades totes les dades de la consulta únicament per a aquells registres que compleixen la condició del JOIN, i apareixent NULL en uns o altres camps per a la resta de registres.
+Com es pot veure, aquesta consulta és equivalent a mostrar tant els registres tornats pel LEFT com pel RIGHT JOIN, eliminant els repetits (aquells registres que compleixin la condició del JOIN, que serien tornats per ambdues consultes).</p>
+<p>El fet d'unir els registres de les consultes de LEFT i JOIN, ambdues tornant els mateixos tipus de camps (Empleat.nom, Empleat.cognoms, Empresa.nom) pot ser expressat en SQL a través de la clàusula UNION:</p>
+<pre><code>SELECT Empleat.nom, Empleat.cognoms, Empresa.nom
+FROM Empleat LEFT JOIN Empresa
+ON Empleat.empresa = Empresa.cif
+UNION
+SELECT Empleat.nom, Empleat.cognoms, Empresa.nom
+FROM Empleat
+RIGHT JOIN Empresa
+ON Empleat.empresa = Empresa.cif
+</code></pre>
+<p>Per tornar els registres de la consulta anterior excloent els repetits faríem:</p>
+<pre><code>SELECT DISTINCTROW
+FROM (
+    SELECT Empleat.nom, Empleat.cognoms, Empresa.nom
+    FROM Empleat LEFT JOIN Empresa
+    ON Empleat.empresa = Empresa.cif
+    UNION
+    SELECT Empleat.nom, Empleat.cognoms, Empresa.nom
+    FROM Empleat
+    RIGHT JOIN Empresa
+    ON Empleat.empresa = Empresa.cif
+)
+</code></pre>
+<p>Ara bé, podríem haver evitat els duplicats mitjançant una solució més enginyosa, retornant en una de les dues consultes (LEFT o RIGHT) només els registres d'una de les parts, excloent així els que compleixen la condició del JOIN, que seran tornats per l'altra:</p>
+<pre><code>SELECT Empleat.nom, Empleat.cognoms, Empresa.nom
+FROM Empleat LEFT JOIN Empresa
+ON Empleat.empresa = Empresa.cif
+UNION
+SELECT Empleat.nom, Empleat.cognoms, Empresa.nom
+FROM Empleat RIGHT JOIN Empresa
+ON Empleat.empresa = Empresa.cif
+WHERE Empleat.empresa IS NULL
+</code></pre>
+<p>Alguns exercicis addicionals sobre JOIN es poden trobar en aquest <a href="http://sqlzoo.net/wiki/More_JOIN_operations">tutorial</a>.</p>
+<h2 id="consultes-anidades">Consultes anidades</h2>
+<p>De vegades s'han d'utilitzar en una consulta els resultats d'una altra consulta, anomenada <a href="http://www.aulaclic.es/sql/t_5_1.htm">subconsulta o consulta anidada</a>. Hi ha diverses variants:</p>
+<h3 id="emprant-in">Emprant IN</h3>
+<p>Obtenir l'identificador dels clients que han comprat algun cotxe a un concessionari de Madrid.</p>
+<pre><code>SELECT DISTINCT cifcl
+FROM Venda
+WHERE cifc IN (
+    SELECT cifc
+    FROM Concessionari
+    WHERE ciutat = 'Madrid'
+)
+</code></pre>
+<p>Obtenir el codi de cotxe dels cotxes venuts per algun concessionari de Madrid.</p>
+<pre><code>SELECT DISTINCT codcotxe
+FROM Venda
+WHERE cifc IN (
+    SELECT cifc
+    FROM Concessionari
+    WHERE ciutat = 'Madrid'
+)
+</code></pre>
+<p>Obtenir el nom i el model dels cotxes venuts per algun concessionari de Barcelona.</p>
+<pre><code>SELECT nom, model
+FROM Cotxe
+WHERE codcotxe IN (
+    SELECT codcotxe
+    FROM Venda
+    WHERE cifc IN (
+        SELECT cifc
+        FROM Concessionari
+        WHERE ciutat = 'Barcelona'
+    )
+)
+</code></pre>
+<h3 id="emprant-operadors-relacionals">Emprant operadors relacionals</h3>
+<p>Un exemple típic seria conèixer els noms dels empleats el salari dels quals està per damunt de la mitjana:</p>
+<pre><code>SELECT nom
+FROM Empleat
+WHERE salari &gt; (
+    SELECT AVG(salari) FROM Empleat
+)
+</code></pre>
+<p>Obtenir el nom i cognoms dels clients l'identificador dels quals de client és menor que el de Juan Martín.</p>
+<pre><code>SELECT nom, cognoms
+FROM Client
+WHERE cifcl &lt; (
+    SELECT cifcl
+    FROM Client
+    WHERE nom = 'Juan' AND cognom = 'Martín'
+)
+</code></pre>
+<h3 id="emprant-all">Emprant ALL</h3>
+<p>Obtenir el nom i cognoms dels clients l'identificador dels quals és menor que tots el dels de Barcelona.</p>
+<pre><code>SELECT nom, cognoms
+FROM Client
+WHERE cifcl &lt; ALL (
+    SELECT cifcl
+    FROM Client
+    WHERE ciutat = 'Barcelona'
+)
+</code></pre>
+<h3 id="emprant-any">Emprant ANY</h3>
+<p>Obtenir el nom i cognoms dels clients l'identificador dels quals és més gran que el d'algun dels de Madrid, i a més el nom comence per a.</p>
+<pre><code>SELECT nom, cognoms
+FROM Client
+WHERE cifcl &gt; ANY (
+    SELECT cifcl
+    FROM Client
+    WHERE ciutat = 'Madrid'
+)
+AND nom LIKE 'A%'
+</code></pre>
+<h3 id="emprant-exists">Emprant EXISTS</h3>
+<p>Obtenir els identificadors dels clients que només han comprat cotxes al concessionari 1.</p>
+<pre><code>SELECT cifcl
+FROM Venda va
+WHERE NOT EXISTS (
+    SELECT *
+    FROM Venda vb
+    WHERE cifc &lt;&gt; 1 AND va.cifcl = vb.cifcl
+)
+</code></pre>
+<p>Obtenir els identificadors dels clients que han comprat cotxes al concessionari 1 i a algun altre.</p>
+<pre><code>SELECT cifcl
+FROM Venda va
+WHERE cifc = 1 AND EXISTS (
+    SELECT *
+    FROM Venda vb
+    WHERE cifc &lt;&gt; 1 AND va.cifcl = vb.cifcl
+)
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>
