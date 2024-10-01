@@ -531,16 +531,12 @@
 <pre><code>$&gt; mysql -u root -p
 </code></pre>
 <p>Per poder fer modificacions al SGBD hem de canviar la contrasenya inicial de root. Podem fer-ho de dues maneres.</p>
-<ul>
-<li>
 <p>Des de la consola de mysql amb la instrucció:</p>
-<p>mysql&gt; ALTER USER 'root'@'localhost' IDENTIFIED BY 'NovaContrasenya';</p>
-</li>
-<li>
+<pre><code>mysql&gt; ALTER USER 'root'@'localhost' IDENTIFIED BY 'NovaContrasenya';
+</code></pre>
 <p>Des de l'intèrpret de comandaments executant el següent script (aquest script realitza una sèrie extra d'accions que s'explicaran més endavant):</p>
-<p>$&gt; sudo mysql_secure_installation</p>
-</li>
-</ul>
+<pre><code>$&gt; sudo mysql_secure_installation
+</code></pre>
 <p>Podem passar un script SQL perquè s'execute en el moment d'accedir amb el client:</p>
 <pre><code>$&gt; mysql -u root -p &lt; "arxiu.sql"
 </code></pre>
