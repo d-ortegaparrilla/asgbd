@@ -511,10 +511,13 @@
 </code></pre>
 <p>Açò instal·la el paquet de MySQL server (mysql-community-server) i els paquets per al components requerits per al servidor, incloent els paquets del client (mysql-community-client), els missatges comuns d'errors i el conjunt de caràcters per al client i el servidor (mysql-community-common), i les libreries compartides (mysql-community-libs).</p>
 <p>Per arrancar el servidor de MySQL:</p>
-<pre><code>$&gt; systemctl start mysqld
+<pre><code>$&gt; sudo systemctl start mysqld
 </code></pre>
-<p>Per a comprovar l'estat del servidor:</p>
-<pre><code>$&gt; systemctl status mysqld
+<p>Per comprovar l'estat del servidor:</p>
+<pre><code>$&gt; sudo systemctl status mysqld
+</code></pre>
+<p>Per activar el servidor i que arranque a l'iniciar de nou el SO.</p>
+<pre><code>$&gt; sudo systemctl enable mysqld
 </code></pre>
 <p>Al primer inici del servidor es realitzen les següents tasques:</p>
 <ul>
@@ -527,6 +530,17 @@
 <p>Per comprovar el funcionament del servidor accedim a ell amb el client:</p>
 <pre><code>$&gt; mysql -u root -p
 </code></pre>
+<p>Per poder fer modificacions al SGBD hem de canviar la contrasenya inicial de root. Podem fer-ho de dues maneres.</p>
+<ul>
+<li>
+<p>Des de la consola de mysql amb la instrucció:</p>
+<p>mysql&gt; ALTER USER 'root'@'localhost' IDENTIFIED BY 'NovaContrasenya';</p>
+</li>
+<li>
+<p>Des de l'intèrpret de comandaments executant el següent script (aquest script realitza una sèrie extra d'accions que s'explicaran més endavant):</p>
+<p>$&gt; sudo mysql_secure_installation</p>
+</li>
+</ul>
 <p>Podem passar un script SQL perquè s'execute en el moment d'accedir amb el client:</p>
 <pre><code>$&gt; mysql -u root -p &lt; "arxiu.sql"
 </code></pre>
@@ -535,7 +549,7 @@
 USE nom_bbdd; -- accedeix a una BD
 SHOW tables; -- mostra les taules d'una BD
 DESCRIBE nom_taula; -- mostra els detalls d'una taula (columnes, tipus, claus...)
-CREATEA DATABASE nom_bbdd; -- crea una BD
+CREATE DATABASE nom_bbdd; -- crea una BD
 DROP DATABASE nom_bbdd; -- esborra una BD
 </code></pre>
 <h2 id="exercici">Exercici</h2>
