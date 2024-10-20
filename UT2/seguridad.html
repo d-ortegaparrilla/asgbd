@@ -1,0 +1,576 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../images/favicon.jpeg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Seguretat en MySQL - Administració de Sistemes Gestors de Base de Dades</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#seguretat-en-mysql" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../index.html" title="Administració de Sistemes Gestors de Base de Dades" class="md-header__button md-logo" aria-label="Administració de Sistemes Gestors de Base de Dades" data-md-component="logo">
+      
+  <img src="../favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Administració de Sistemes Gestors de Base de Dades
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Seguretat en MySQL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Administració de Sistemes Gestors de Base de Dades" class="md-nav__button md-logo" aria-label="Administració de Sistemes Gestors de Base de Dades" data-md-component="logo">
+      
+  <img src="../favicon.png" alt="logo">
+
+    </a>
+    Administració de Sistemes Gestors de Base de Dades
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT1. Instal·lació de sistemes gestors de base de dades.
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UT1. Instal·lació de sistemes gestors de base de dades.
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT1/introduccio.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducció als sistemes gestors de bases de dades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT1/mysql-caracteristiques.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Característiques de MySQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT1/mysql-instalacio.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instal·lació de MySQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT1/sgbd-instalacio.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instal·lació de SGBD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UT1/sql.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Repàs de consultes SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UT2. Configuració de sistemes gestors de base de dades.
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UT2. Configuració de sistemes gestors de base de dades.
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduccio.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducció
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="variables.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables i opcions de MySQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mysql_secure_installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      mysql_secure_installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracio-de-connexions-encriptades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuració de connexions encriptades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acces-remot-al-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accés remot al servidor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercici" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="seguretat-en-mysql">Seguretat en MySQL</h1>
+<h2 id="mysql_secure_installation">mysql_secure_installation</h2>
+<p>Un dels primers passos per assegurar la instal·lació de MySQL és executar l'script <strong>mysql_secure_installation</strong>:</p>
+<pre><code>sudo mysql_secure_installation
+</code></pre>
+<p>Amb aquest script:</p>
+<ul>
+<li>Canvia la política de contrasenyes (forta) (<strong>validate_password</strong>)</li>
+<li>Elimina l'usuari anònim, el qual permet a qualsevol accedir a MySQL sense tindre creat un usuari.</li>
+<li>Deshabilita accés remot de root a MySQL.</li>
+<li>Elimina la base de dades test, a la qual pot accedir qualsevol.</li>
+<li>Recàrrega la taula de privilegis del sistema.</li>
+</ul>
+<h2 id="configuracio-de-connexions-encriptades">Configuració de connexions encriptades</h2>
+<p>Es pot configurar MySQL perquè les connexions al servidor es realitzen encriptades.</p>
+<p>Per demanar que els clients es connecten mitjançant connexions xifrades, s'ha d'activar la variable de sistema <strong>require_secure_transport</strong>. </p>
+<p>Les següents variables de sistema del costat del servidor especifiquen els fitxers de certificat i clau que fa servir el servidor quan permet als clients establir connexions xifrades:</p>
+<ul>
+<li><strong>ssl_ca</strong>: nom del fitxer de certificat de l'autoritat de certificació (CA). </li>
+<li><strong>ssl_cert</strong>: nom del fitxer de certificat de clau pública del servidor. Aquest certificat es pot enviar al client i autenticar-se amb el certificat CA que té.</li>
+<li><strong>ssl_key</strong>: nom del fitxer de clau privada del servidor.</li>
+</ul>
+<p>Aquests arxius es busquen al directori de dades de MySQL, definit a la variable de sistema <strong>datadir</strong>. El servidor MySQL és capaç de crear a l'inici els arxius dels certificats que falten.</p>
+<p>Per exemple, per habilitar el servidor per a connexions xifrades, es pot afegir les següents línies al fitxer <strong>my.cnf</strong>, canviant els noms dels fitxers segons siga necessari:</p>
+<pre><code>[mysqld]
+ssl_ca=ca.pem
+ssl_cert=server-cert.pem
+ssl_key=server-key.pem
+</code></pre>
+<p>Si volem obligar que els clients realitzen les connexions xifrades afegeríem les següents línies:</p>
+<pre><code>[mysqld]
+ssl_ca=ca.pem
+ssl_cert=server-cert.pem
+ssl_key=server-key.pem
+require_secure_transport=ON
+</code></pre>
+<h2 id="acces-remot-al-servidor">Accés remot al servidor</h2>
+<p>Per accedir de manera remota al servidor crearem un usuari que puga connectar-se des de qualsevol direcció. Limitarem els permisos d'aquest usuari a una BD específica.</p>
+<pre><code>CREATE USER nom_usuari IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON nom_bd.* TO nom_usuari;
+</code></pre>
+<h2 id="exercici">Exercici</h2>
+<p>Criteris d'avaluació 2a, 2f, 2g, 2h.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>
